@@ -30,6 +30,7 @@ export default function CS_GGIS() {
         <h2>Why I Chose CS + GGIS</h2>
         <p>Now, you may be wondering why I chose to major in CS + GGIS for my Bachelor's degree...</p>
         <p>Here are some reasons why I chose it:</p>
+        <p className="hint"> PSSST: click on the computer OR the globe to explore the different reasons! </p>
         
         <div className="cs-ggis-carousel-div">
             <div className="items-container">

@@ -16,6 +16,15 @@
   src: url('/Ubuntu-Regular.ttf') format('truetype');
 }
 
+@media (max-width: 850px) {
+  .items-container {
+    flex-direction: column;
+  }
+  .computer-wrapper {
+    width: clamp(260px, 70vw, 480px);
+  }
+}
+
 html {
   font-size: clamp(14px, 1.2vw + 10px, 20px);
 }
@@ -255,7 +264,7 @@ body {
   width: 49%;
   transform: translateX(-50%);
   text-align: center;
-  font-size: clamp(0.8rem, 1.2vw + 0.15rem, 1.35rem);
+  font-size: clamp(0.7rem, 1.4vw + 0.15rem, 1.25rem);
   font-family: 'Courier New';
   color: black;
   font-weight: 500;
@@ -279,13 +288,19 @@ body {
   transform-style: preserve-3d;
 }
 
-@media (max-width: 850px) {
-  .items-container {
-    flex-direction: column;
-  }
+.personal-projects {
+  align-items: center;
+}
 
-  .computer-wrapper {
-    width: clamp(260px, 70vw, 480px);
-  }
+.personal-projects a {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  align-items: center;
+}
 
+.hint {
+  font-size: 0.6rem;
+  color: green;
 }

@@ -3,6 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import About from './pages/About.jsx'
 import Research from './pages/Research.jsx'
 import Secrets from './pages/Secrets.jsx'
+import Projects from "./pages/Projects.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Routes>
           <Route path="/About" element={<About />} />
           <Route path="/Research" element={<Research />} />
+          <Route path="/Projects" element={<Projects />} />
           <Route path="/Secrets" element={<Secrets />} />
         </Routes>
       </div>
