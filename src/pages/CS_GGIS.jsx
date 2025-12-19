@@ -12,7 +12,7 @@ export default function CS_GGIS() {
     "For a long time, I planned to pursue a dual degree in Computer Science and Environmental Science",
     "But with the time constraints of earning my Bachelor's degree, I eventually had to choose one path",
     "UIUC stood out because it offered a perfect way to combine my technical interests with my passion for the environment",
-    "Hence, why I chose to major in CS + GGIS! I loved learning about technology and the kind of the impact it could have.",
+    "Hence, why I chose to major in CS + GGIS! I loved learning about technology and the impact it can have.",
     "If you were to ask me again, I would pick CS + GGIS again in a heartbeat ♡"
   ];
 
