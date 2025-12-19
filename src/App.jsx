@@ -4,6 +4,7 @@ import About from './pages/About.jsx'
 import Research from './pages/Research.jsx'
 import Secrets from './pages/Secrets.jsx'
 import Projects from "./pages/Projects.jsx";
+import Home from "./pages/Home.jsx";
 
 export default function App() {
   return (
@@ -17,16 +18,15 @@ export default function App() {
         <Link to="/Projects">Projects</Link>
         <Link to="/About" element={<About />}>About Me</Link>
         <Link to="/Contact">Contact</Link>
-         <Link to="/Secrets">Shh...</Link>
       </nav>
       </div>
 
       <div className="routes">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Research" element={<Research />} />
           <Route path="/Projects" element={<Projects />} />
-          <Route path="/Secrets" element={<Secrets />} />
         </Routes>
       </div>
     </div>

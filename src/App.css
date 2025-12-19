@@ -304,3 +304,20 @@ body {
   font-size: 0.6rem;
   color: green;
 }
+
+.home-me-photos{
+  width: min(900px, 80vw);
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.home-photos{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
