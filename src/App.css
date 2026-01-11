@@ -90,7 +90,6 @@ body {
 }
 
 .about-interests-div {
-  /* letter-spacing: 0.1em; */
   margin: 10px;
   text-align: center;
 }
@@ -103,17 +102,21 @@ body {
 }
 
 .about-info {
-  padding: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.about-cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
 }
 
-.about-card {
+.card {
   flex: 0 0 calc(33.33% - 10px);
   max-width: calc(33.33% - 10px);
   width: 100%;
@@ -125,7 +128,7 @@ body {
   background: transparent;
 }
 
-.about-card-inner {
+.card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -135,11 +138,15 @@ body {
   border-radius: 10px;
 }
 
-.about-card:hover .about-card-inner {
+.card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
-.about-card-front, .about-card-back {
+.card-front h1, h2{
+  font-size: 1.2rem;
+}
+
+.card-front, .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -152,16 +159,16 @@ body {
   align-items: center;
 }
 
-.about-card-back {
+.card-back {
   transform: rotateY(180deg);
 }
 
-.about-card-back ul {
+.card-back ul {
   list-style-type: none;
   font-size: 1rem;
 }
 
-.about-card-title-back {
+.card-title-back {
   font-size: 1.4rem;
 }
 
@@ -170,25 +177,35 @@ body {
 }
 
 .research-div a{
+  font-size: 1.3rem;
   text-decoration: none;
   color: black;
 }
 
+.research-title a{
+  font-size: 1.3rem;
+}
+
+.research-group-name a{
+  font-size: 1rem;
+}
+
 .research-goal {
-  font-size: 1.5rem;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 20px;
 }
 
 .research-objectives {
   display: flex;
   justify-content: space-between;
-  gap: 40px;   
+  gap: 30px;   
 }
 
-.research-objectives > div {
+.research-objectives div {
   flex: 1;
   border-radius: 10px;
   background-color: #edc487;
+  padding: 0.5rem;
 }
 
 .research-objective-title {
@@ -200,6 +217,7 @@ body {
 }
 
 .research-div li {
+  font-size: 0.8rem;
   margin-bottom: 6px;    
 }
 
@@ -230,16 +248,11 @@ body {
   align-items: center;
 }
 
-.cs-ggis-carousel-div {
-  margin-top: 24px;
-}
-
 .items-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin-top: 24px;
 }
 
 .computer-wrapper {

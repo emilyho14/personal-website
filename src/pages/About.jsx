@@ -77,50 +77,47 @@ export default function About() {
             {" "}I previously received my Bachelor's in Science 
             in{" "}
             <a href="https://siebelschool.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-geography">
-             Computer Science + Geography & Geographic Information Science (CS + GGIS).
+             Computer Science + Geography & Geographic Information Science (CS + GGIS)
             </a>
             also from the University of Illinois at Urbana Champaign.
         </div>
         <CS_GGIS />
         <div className="about-interests-div">
             <h2> My Hobbies! </h2>
-            <div className="about-interests-cards-div">
-                <div className="about-cards">
-                {cards.map((card, i) => (
-                    <div key={i} className="about-card">
-                        <div className="about-card-inner">
-                            {/* CARD FRONT */}
-                            <div className="about-card-front">
-                                <h2>{card.title}</h2>
-                                <h1 className="about-card-emoji">{card.title_emoji}</h1>
-                            </div>
+            <div className="cards">
+            {cards.map((card, i) => (
+                <div key={i} className="card">
+                    <div className="card-inner">
+                        {/* CARD FRONT */}
+                        <div className="card-front">
+                            <h2>{card.title}</h2>
+                            <h1 className="about-card-emoji">{card.title_emoji}</h1>
+                        </div>
 
-                             {/* CARD BACK */}
-                            <div className="about-card-back">
-                                <div className="about-card-title-back"> 
-                                    {card.card_title_back && <p><strong>{card.card_title_back}</strong></p>}
-                                </div>
-                                
-
-                                {card.card_text_back && <p>{card.card_text_back}</p>}
-
-                                {card.card_list_back && (
-                                    <ul>
-                                        {card.card_list_back.map((r, idx) => (
-                                            <li key={idx}>
-                                            <a href={r.url} target="_blank" rel="noopener noreferrer">
-                                                {r.name}
-                                            </a>
-                                            </li>
-                                        ))}
-                                        </ul>
-                                )}
+                        <div className="card-back">
+                            <div className="card-title-back"> 
+                                {card.card_title_back && <p><strong>{card.card_title_back}</strong></p>}
                             </div>
                             
+
+                            {card.card_text_back && <p>{card.card_text_back}</p>}
+
+                            {card.card_list_back && (
+                                <ul>
+                                    {card.card_list_back.map((r, idx) => (
+                                        <li key={idx}>
+                                        <a href={r.url} target="_blank" rel="noopener noreferrer">
+                                            {r.name}
+                                        </a>
+                                        </li>
+                                    ))}
+                                    </ul>
+                            )}
                         </div>
+                        
                     </div>
-                ))}
                 </div>
+            ))}
             </div>
         </div>
     </div>
