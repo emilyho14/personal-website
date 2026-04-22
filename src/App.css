@@ -25,7 +25,7 @@
   }
 }
 
-html {
+html { 
   font-size: clamp(14px, 1.2vw + 10px, 20px);
 }
 
@@ -116,16 +116,21 @@ body {
   color: white;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 200px;
+}
+
 .card {
-  flex: 0 0 calc(33.33% - 10px);
-  max-width: calc(33.33% - 10px);
-  width: 100%;
-  padding: 10px;
-  transition: 0.4s;
-  border: 3px solid transparent;
+  flex: 1 1 300px;
+  max-width: 350px;
+  aspect-ratio: 3 / 4;
   perspective: 1000px;
-  height: 220px;
-  background: transparent;
+  font-size: 20px;
 }
 
 .card-inner {
@@ -142,34 +147,52 @@ body {
   transform: rotateY(180deg);
 }
 
-.card-front h1, h2{
-  font-size: 1.2rem;
-}
-
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0; /* cleaner than width/height */
   backface-visibility: hidden;
   border-radius: 10px;
-  padding: 10px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  text-align: center;
 }
 
 .card-back {
   transform: rotateY(180deg);
 }
 
-.card-back ul {
-  list-style-type: none;
-  font-size: 1rem;
+.card-title-back p {
+  margin: 0;             
+  font-size: 1rem;        
+  line-height: 1.2;
 }
 
-.card-title-back {
-  font-size: 1.4rem;
+.card-title-back strong {
+  font-weight: 600;
+}
+
+.card-back ul {
+  margin-top: 0.4rem;
+  list-style: none;
+}
+
+.card-back li,
+.card-back p {
+  font-size: 1.3em;
+  line-height: 1.3;
+}
+
+.card-front h2 {
+  font-size: 1.2rem;
+}
+
+.about-card-emoji {
+  font-size: 2rem;
 }
 
 .research-div {
@@ -179,7 +202,6 @@ body {
 .research-div a{
   font-size: 1.3rem;
   text-decoration: none;
-  color: black;
 }
 
 .research-title a{
@@ -216,8 +238,7 @@ body {
   list-style: none;
 }
 
-.research-div li {
-  font-size: 0.8rem;
+.research-objectives li {
   margin-bottom: 6px;    
 }
 

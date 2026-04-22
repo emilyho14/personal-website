@@ -1,6 +1,7 @@
 import { useState } from "react";
 import illini from "../../images/illini.png"
 import CS_GGIS from "./CS_GGIS";
+import Card from "../components/card";
 
 export default function About() {
     const [cards] = useState([
@@ -85,39 +86,9 @@ export default function About() {
         <div className="about-interests-div">
             <h2> My Hobbies! </h2>
             <div className="cards">
-            {cards.map((card, i) => (
-                <div key={i} className="card">
-                    <div className="card-inner">
-                        {/* CARD FRONT */}
-                        <div className="card-front">
-                            <h2>{card.title}</h2>
-                            <h1 className="about-card-emoji">{card.title_emoji}</h1>
-                        </div>
-
-                        <div className="card-back">
-                            <div className="card-title-back"> 
-                                {card.card_title_back && <p><strong>{card.card_title_back}</strong></p>}
-                            </div>
-                            
-
-                            {card.card_text_back && <p>{card.card_text_back}</p>}
-
-                            {card.card_list_back && (
-                                <ul>
-                                    {card.card_list_back.map((r, idx) => (
-                                        <li key={idx}>
-                                        <a href={r.url} target="_blank" rel="noopener noreferrer">
-                                            {r.name}
-                                        </a>
-                                        </li>
-                                    ))}
-                                    </ul>
-                            )}
-                        </div>
-                        
-                    </div>
-                </div>
-            ))}
+                {cards.map((card, i) => (
+                    <Card key={i} card={card} />
+                ))}
             </div>
         </div>
     </div>
