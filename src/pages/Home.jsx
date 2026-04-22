@@ -31,6 +31,7 @@ export default function Home() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
     >
+      <h1>EMILY WAS HERE AND TESTING</h1>
         <img src={images[i]} alt="" className="home-photos" />
     </div>
     );
