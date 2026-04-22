@@ -69,7 +69,7 @@ export default function About() {
     return (
     <div>
         <div className="about-info">
-            GAHHHH Hello! My name is Emily Ho and I am a current first year Master's student studying
+            Hello! My name is Emily Ho and I am a current first year Master's student studying
             Computer Science at the in{" "}
             <div className="hover-illini-box">
                 University of Illinois at Urbana Champaign! 
