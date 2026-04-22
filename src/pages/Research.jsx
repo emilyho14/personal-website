@@ -22,7 +22,7 @@ export default function Research() {
       ],
     },
     {
-      title: "Future Work",
+      title: "Next Steps",
       title_emoji: "🚀",
       card_list_back: [
         { name: "Incorporate Model Context Protocol (MCP)" },
