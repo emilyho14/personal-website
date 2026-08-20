@@ -28,6 +28,9 @@ export default function CS_GGIS() {
   return (
     <div className="about-interests-div">
         <h2>Why I Chose CS + GGIS</h2>
+        <a href="https://siebelschool.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-geography">
+             Computer Science + Geography & Geographic Information Science (CS + GGIS)
+            </a>
         <p>Now, you may be wondering why I chose to major in CS + GGIS for my Bachelor's degree...</p>
         <p>Here are some reasons why I chose it:</p>
         <p className="hint"> PSSST: click on the computer OR hover over the globe to explore the different reasons! </p>

@@ -18,14 +18,13 @@ function Contact() {
     return (
         <div>
             <div className='contact-container'>
-                <p> Hello there! </p>
                 <p>I'd love to connect! Whether you want to talk about software development, research, or collaboration opportunities, feel free to reach out below.</p>
             </div>
             <p className="contact-icons">
                 <a href="mailto:eeho2@illinois.edu" target="_blank" rel="noopener noreferrer">
                     <FaEnvelope />
                 </a>
-                <a href="https://www.linkedin.com/in/emily-ho14" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/emily-e-ho/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                 </a>
                 <a href="https://github.com/emilyho14" target="_blank" rel="noopener noreferrer">

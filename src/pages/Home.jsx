@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import me1 from "../../images/me/1.jpeg";
 import me2 from "../../images/me/2.jpeg";
@@ -25,14 +26,32 @@ export default function Home() {
   }, [paused, images.length]);
 
   return (
-    <div
-        className="home-me-photos"
-        style={{ "--bg": `url(${images[i]})` }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-    >
-        <img src={images[i]} alt="" className="home-photos" />
-    </div>
-    );
+    <div className="home-page">
+      <section className="home-hero">
+        <div className="home-copy">
+          <p className="eyebrow">Computer Science student</p>
+          <h1>Emily Ho</h1>
+          <p className="home-intro">
+            I’m a Master’s student in Computer Science at the University of Illinois
+            Urbana-Champaign, interested in how technology, data, and design can help
+            people better understand the world around them.
+          </p>
+          <div className="home-actions">
+            <Link to="/About">About</Link>
+            <Link to="/Projects">Projects</Link>
+            <Link to="/Contact">Contact</Link>
+          </div>
+        </div>
 
+        <div
+          className="home-me-photos"
+          style={{ "--bg": `url(${images[i]})` }}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <img src={images[i]} alt="Emily Ho" className="home-photos" />
+        </div>
+      </section>
+    </div>
+  );
 }

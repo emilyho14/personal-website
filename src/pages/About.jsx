@@ -1,5 +1,4 @@
 import { useState } from "react";
-import illini from "../../images/illini.png"
 import CS_GGIS from "./CS_GGIS";
 import Card from "../components/card";
 
@@ -8,19 +7,19 @@ export default function About() {
         {
             title: 'Reading',
             title_emoji: '📚📖',
-            card_title_back: 'Current Reads: ',
+            card_title_back: 'Favorite Books: ',
             card_list_back: [
                 {
-                    name: "Algospeak - Adam Aleksic",
-                    url: "https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/"
+                    name: "Educated by Tara Westover",
+                    url: "https://www.goodreads.com/en/book/show/35133922-educated"
                 },
                 {
-                    name: "Rethinking Medications - Jerry Avorn",
-                    url: "https://www.simonandschuster.com/books/Rethinking-Medications/Jerry-Avorn/9781668052846"
+                    name: "The Silent Patient by Alex Michaelides",
+                    url: "https://www.goodreads.com/en/book/show/40097951-the-silent-patient"
                 },
                 {
-                    name: "The Vegetarian - Han King",
-                    url: "https://www.penguinrandomhouse.com/books/250333/the-vegetarian-by-han-kang/"
+                    name: "Tell Me Three Things by Julie Buxbaum",
+                    url: "https://www.goodreads.com/book/show/25893582-tell-me-three-things?from_search=true&from_srp=true&qid=GBueIoh2zs&rank=1"
                 }
             ],
         },
@@ -50,41 +49,41 @@ export default function About() {
         {
             title: 'Running',
             title_emoji: '🏃🏻‍♀️💨',
-            card_title_back: 'Christie Clinic Illinois Race Weekend',
+            card_title_back: 'Run Mag Mile 5k',
             card_list_back: [
                 {
-                    name: "Next Race: April 25, 2026",
+                    name: "Next Race: September 12, 2026",
                 },
                 {
-                    name: "Distance: 10km"
+                    name: "Distance: 5km"
                 },
                 {
                     name: "Race Details",
-                    url: "https://illinoismarathon.com/"
+                    url: "https://runmagmile.com/"
                 },
             ]
         }
     ]);
 
     return (
-    <div>
+    <div className="about-page">
         <div className="about-info">
-            Hello! My name is Emily Ho and I am a current first year Master's student studying
-            Computer Science at the in{" "}
-            <div className="hover-illini-box">
-                University of Illinois at Urbana Champaign! 
-                <img src={illini} className="hover-illini" />
-            </div>
-            {" "}I previously received my Bachelor's in Science 
-            in{" "}
-            <a href="https://siebelschool.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-geography">
-             Computer Science + Geography & Geographic Information Science (CS + GGIS)
-            </a>
-            also from the University of Illinois at Urbana Champaign.
+            <p>
+              I’m a first-year Master’s student in Computer Science at the University of
+              Illinois Urbana-Champaign. I completed my B.S. in Computer Science + Geography
+              &amp; Geographic Information Science at the same institution, where my interest in
+              computational problem solving and spatial thinking began to grow.
+            </p>
+            <p>
+              My work is shaped by a broader interest in how technology, data, and design can
+              help people understand complex systems in a more intuitive and meaningful way.
+            </p>
         </div>
+
         <CS_GGIS />
+
         <div className="about-interests-div">
-            <h2> My Hobbies! </h2>
+            <h2>Beyond the work</h2>
             <div className="cards">
                 {cards.map((card, i) => (
                     <Card key={i} card={card} />
