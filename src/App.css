@@ -93,30 +93,39 @@ body {
 }
 
 .routes {
-  padding: 10px;
+  padding: 0 10px 10px;
 }
 
 .simple-home {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.25rem 1rem 1rem;
 }
 
 .simple-home-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.2rem;
+  padding-right: 0.75rem;
+}
+
+.small-label {
+  margin: 0;
 }
 
 .simple-home-copy h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 0.75rem;
+  margin: 0;
   line-height: 1.1;
 }
 
 .simple-home-copy p {
+  margin: 0;
   max-width: 620px;
   line-height: 1.7;
   color: #2a2a2a;
@@ -125,6 +134,7 @@ body {
 .home-photo-wrap {
   width: min(460px, 100%);
   margin-left: auto;
+  justify-self: end;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -193,9 +203,14 @@ body {
 @media (max-width: 850px) {
   .simple-home {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .simple-home-copy {
+    padding-right: 0;
   }
   .home-photo-wrap {
     margin-left: 0;
+    justify-self: stretch;
     width: 100%;
   }
   .items-container {

@@ -28,8 +28,6 @@ export default function Home() {
   return (
     <div className="simple-home">
       <div className="simple-home-copy">
-        <p className="small-label">Computer Science student</p>
-        <h1>Emily Ho</h1>
         <p>
           I’m a Master’s student in Computer Science at the University of Illinois
           Urbana-Champaign. I enjoy in building applications to
