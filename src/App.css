@@ -23,6 +23,13 @@
   .computer-wrapper {
     width: clamp(260px, 70vw, 480px);
   }
+  .simple-home {
+    grid-template-columns: 1fr;
+  }
+  .header-nav {
+    gap: 0.8rem 1.1rem;
+    flex-wrap: wrap;
+  }
 }
 
 html { 
@@ -32,22 +39,15 @@ html {
 body {
   font-family: 'Nunito', 'ubuntu';
   margin: 0;
-  background: #f7f5f1;
-  color: #1f2a2d;
-}
-
-#root {
-  min-height: 100vh;
 }
 
 .header-bar {
   font-family: 'mochi';
   text-align: center;
   width: 100%;
-  background: #b8caa3;
+  background: #b5cc93;
   color: white;
   padding-top: 15px;
-  box-shadow: 0 2px 8px rgba(27, 42, 31, 0.08);
 }
 
 .header-title {
@@ -67,11 +67,11 @@ body {
   justify-content: center;
   gap: 3vw;
   margin-bottom: 10px;
-  font-size: clamp(1.1rem, 1.1vw + 0.4rem, 2rem);
+  font-size: clamp(1.4rem, 1.3vw + 0.2rem, 4.0rem);
 }
 
 .header-nav a {
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   margin-bottom: 10px;
 }
 
@@ -85,7 +85,7 @@ body {
 .header-title a:active,
 .header-nav a:active {
   color: #fffff0;
-  transform: translateY(-1px);
+  transform: scale(1.17);
 }
 
 .content {
@@ -93,26 +93,52 @@ body {
 }
 
 .routes {
-  padding: 24px 16px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
+  padding: 10px;
 }
 
-.about-page,
-.home-page {
+.simple-home {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.simple-home-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.simple-home-copy h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.simple-home-copy p {
+  max-width: 620px;
+  line-height: 1.7;
+  color: #2a2a2a;
+}
+
+.home-photo-wrap {
+  width: min(460px, 100%);
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.home-photos {
+  display: block;
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .about-interests-div {
-  margin: 40px 0 10px;
+  margin: 10px;
   text-align: center;
-}
-
-.about-interests-div h2,
-.about-info p,
-.home-copy h1,
-.home-copy p {
-  margin: 0;
 }
 
 .about-interests-cards-div {
@@ -124,102 +150,60 @@ body {
 
 .about-info {
   display: grid;
-  gap: 18px;
-  padding: 18px 12px 8px;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  gap: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.about-info p {
-  max-width: 760px;
+.about-info div {
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.home-page {
-  padding-top: 8px;
+.contact-container {
+  background-color: white;
+  width: 97%;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
-.home-hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 36px;
-  padding: 18px 6px 10px;
-}
-
-.home-copy {
-  display: grid;
-  gap: 18px;
-}
-
-.eyebrow {
-  color: #5c6f4d;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.home-copy h1 {
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  line-height: 1.1;
-  font-family: 'Poppins', 'Nunito', sans-serif;
-  color: #1f2a2d;
-}
-
-.home-intro {
-  max-width: 620px;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #3f4f52;
-}
-
-.home-actions {
+.contact-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.home-actions a {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.2rem;
-  border-radius: 999px;
-  background: #dfe8d0;
-  color: #1f2a2d;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.home-actions a:hover {
-  background: #cfe0b9;
-  transform: translateY(-1px);
-}
-
-.home-me-photos{
-  width: min(800px, 100%);
-  aspect-ratio: 3 / 2;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 12px 30px rgba(32, 46, 38, 0.08);
-}
-
-.home-photos{
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-interests-div h2 {
+  gap: 25px;
   font-size: 2rem;
-  margin-bottom: 18px;
-  font-family: 'Poppins', 'Nunito', sans-serif;
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  color: #3383C7;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.3);
+  color: #87539B;
+}
+
+@media (max-width: 850px) {
+  .simple-home {
+    grid-template-columns: 1fr;
+  }
+  .home-photo-wrap {
+    margin-left: 0;
+    width: 100%;
+  }
+  .items-container {
+    flex-direction: column;
+  }
+  .computer-wrapper {
+    width: clamp(260px, 70vw, 480px);
+  }
 }
 
 .cards {

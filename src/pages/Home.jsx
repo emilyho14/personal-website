@@ -26,32 +26,24 @@ export default function Home() {
   }, [paused, images.length]);
 
   return (
-    <div className="home-page">
-      <section className="home-hero">
-        <div className="home-copy">
-          <p className="eyebrow">Computer Science student</p>
-          <h1>Emily Ho</h1>
-          <p className="home-intro">
-            I’m a Master’s student in Computer Science at the University of Illinois
-            Urbana-Champaign, interested in how technology, data, and design can help
-            people better understand the world around them.
-          </p>
-          <div className="home-actions">
-            <Link to="/About">About</Link>
-            <Link to="/Projects">Projects</Link>
-            <Link to="/Contact">Contact</Link>
-          </div>
-        </div>
+    <div className="simple-home">
+      <div className="simple-home-copy">
+        <p className="small-label">Computer Science student</p>
+        <h1>Emily Ho</h1>
+        <p>
+          I’m a Master’s student in Computer Science at the University of Illinois
+          Urbana-Champaign. I enjoy in building applications to
+          understand and improve the world around me, as well as learning how systems work behind the scenes.
+        </p>
+      </div>
 
-        <div
-          className="home-me-photos"
-          style={{ "--bg": `url(${images[i]})` }}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          <img src={images[i]} alt="Emily Ho" className="home-photos" />
-        </div>
-      </section>
+      <div
+        className="home-photo-wrap"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <img src={images[i]} alt="Emily Ho" className="home-photos" />
+      </div>
     </div>
   );
 }

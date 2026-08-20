@@ -17,7 +17,7 @@ export default function App() {
        <nav className="header-nav">
         <Link to="/Research">Research</Link>
         <Link to="/Projects">Projects</Link>
-        <Link to="/About">About</Link>
+        <Link to="/About" element={<About />}>About Me</Link>
         <Link to="/Contact">Contact</Link>
       </nav>
       </div>

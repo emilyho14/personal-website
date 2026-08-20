@@ -1,4 +1,5 @@
 import { useState } from "react";
+import illini from "../../images/illini.png"
 import CS_GGIS from "./CS_GGIS";
 import Card from "../components/card";
 
@@ -66,24 +67,19 @@ export default function About() {
     ]);
 
     return (
-    <div className="about-page">
+    <div>
         <div className="about-info">
-            <p>
-              I’m a first-year Master’s student in Computer Science at the University of
-              Illinois Urbana-Champaign. I completed my B.S. in Computer Science + Geography
-              &amp; Geographic Information Science at the same institution, where my interest in
-              computational problem solving and spatial thinking began to grow.
-            </p>
-            <p>
-              My work is shaped by a broader interest in how technology, data, and design can
-              help people understand complex systems in a more intuitive and meaningful way.
-            </p>
+            <div> 
+                Master's of Computer Science (MCS) - University of Illinois at Urbana Champaign [Expected December 2026]
+            </div>
+            <div>
+                B.S. Computer Science + Geography & Geographic Information Science (CS + GGIS)  - University of Illinois at Urbana Champaign [May 2025]
+            </div>
+            
         </div>
-
         <CS_GGIS />
-
         <div className="about-interests-div">
-            <h2>Beyond the work</h2>
+            <h2> Beyond School and Work </h2>
             <div className="cards">
                 {cards.map((card, i) => (
                     <Card key={i} card={card} />

@@ -32,7 +32,6 @@ function Contact() {
                 </a>
             </p>
         </div>
-
     );
 }
 
