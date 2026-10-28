@@ -34,7 +34,7 @@ export default function Research() {
     return (
         <div className="research-div">
             <h1 className="research-title"> 
-                <a href="https://timan.cs.illinois.edu/eeho2/">
+                <a href="https://timan.cs.illinois.edu/eeho2/" className="research-header">
                     HealthAdvisor: An Intelligent Agent for Interpreting Medical Test Results 
                 </a>
             </h1>
@@ -42,8 +42,22 @@ export default function Research() {
                 <a href="https://timan.cs.illinois.edu/ir/"> Research Group: TIMAN at the University of Illinois at Urbana Champaign </a>
             </h3>
             <div className="research-goal">
-                The main goal of this project is to leverage AI to make healthcare more accessible by 
-                helping users interpret their lab results and take a more proactive role in managing their health.
+                <p>
+                  Although this project is still in its early stages, its goal is to
+                  explore how we can make healthcare more accessible and personalized.
+                  By helping users better understand their lab results, the project
+                  aims to empower individuals to take a more proactive role in
+                  managing their health and recognizing when it may be appropriate
+                  to seek professional medical guidance.
+              </p>
+
+              <p>
+                  Furthermore, this project uses knowledge bases and an AI agent
+                  to simplify complex medical terminology, apply established
+                  reference ranges from medical literature to interpret lab results,
+                  and provide actionable insights to help users better understand
+                  their health.
+              </p>
             </div>
 
             <div className="cards">

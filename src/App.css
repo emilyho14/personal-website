@@ -306,6 +306,14 @@ body {
   font-size: 1.6rem;
 }
 
+.research-header {
+  display: inline-block;
+  max-width: 90ch;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
 .research-div {
   text-align: center;
 }
@@ -316,16 +324,40 @@ body {
 }
 
 .research-title a{
-  font-size: 1.3rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.research-title {
+  margin: 0 auto clamp(0.35rem, 1.2vw, 0.75rem);
+  padding-inline: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 .research-group-name a{
-  font-size: 1rem;
+  display: inline-block;
+  max-width: 70ch;
+  padding-inline: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, calc(0.95rem + 0.65vw), 1.4rem);
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.research-group-name {
+  margin-bottom: clamp(0.25rem, 0.8vw, 0.6rem);
 }
 
 .research-goal {
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: min(100%, 78ch);
+  margin-inline: auto;
+  padding: clamp(0.25rem, 1vw, 0.75rem) clamp(0.75rem, 3vw, 1.5rem);
   font-size: 1rem;
-  padding: 20px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.research-goal p {
+  margin: 0;
 }
 
 .research-objectives {
