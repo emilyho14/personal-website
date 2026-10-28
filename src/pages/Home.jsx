@@ -29,9 +29,10 @@ export default function Home() {
     <div className="simple-home">
       <div className="simple-home-copy">
         <p>
-          I’m a Master’s student in Computer Science at the University of Illinois
-          Urbana-Champaign. I enjoy in building applications to
-          understand and improve the world around me, as well as learning how systems work behind the scenes.
+          Hello, I'm Emily! I’m a Master’s student in Computer Science at the University of Illinois
+          Urbana-Champaign, graduating in December 2026. 
+          
+          I've always been curious about how things work and how things come together (I've always been a fan of puzzles!). That's part of why I love softwar engineering. I enjoy bulding applications that make people's lives a little easier, while also exploring the systems work that make everything work behind the scenes. There's something really satisfying about working through a challenge and seeing everything finally come together.
         </p>
       </div>
 

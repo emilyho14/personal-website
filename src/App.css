@@ -33,12 +33,14 @@
 }
 
 html { 
-  font-size: clamp(14px, 1.2vw + 10px, 20px);
+  font-size: 16px;
 }
 
 body {
   font-family: 'Nunito', 'ubuntu';
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .header-bar {
@@ -53,7 +55,7 @@ body {
 .header-title {
   margin: 10px;
   margin-top: 0px;
-  font-size: 3.0rem;
+  font-size: 2.5rem;
 }
 
 .header-title a,
@@ -67,7 +69,7 @@ body {
   justify-content: center;
   gap: 3vw;
   margin-bottom: 10px;
-  font-size: clamp(1.4rem, 1.3vw + 0.2rem, 4.0rem);
+  font-size: 1.05rem;
 }
 
 .header-nav a {
@@ -116,10 +118,12 @@ body {
 
 .small-label {
   margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 .simple-home-copy h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
   margin: 0;
   line-height: 1.1;
 }
@@ -127,6 +131,7 @@ body {
 .simple-home-copy p {
   margin: 0;
   max-width: 620px;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: #2a2a2a;
 }
@@ -163,7 +168,7 @@ body {
   gap: 0.8rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 1rem;
+  font-size: 1.02rem;
   line-height: 1.8;
 }
 
