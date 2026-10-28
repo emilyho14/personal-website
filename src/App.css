@@ -163,19 +163,61 @@ body {
   margin: auto;
 }
 
-.about-info {
-  display: grid;
-  gap: 0.8rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1.02rem;
-  line-height: 1.8;
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: min(100%, 760px);
+  margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+  padding-inline: 1rem;
+  font-size: clamp(1rem, calc(0.95rem + 0.3vw), 1.2rem);
+  text-align: center;
 }
 
-.about-info div {
-  background: transparent;
-  border: none;
-  padding: 0;
+.education > h3 {
+  font-size: clamp(1.35rem, calc(1.15rem + 0.8vw), 1.8rem);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: clamp(0.65rem, 2vw, 1rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid #dfe6d7;
+  border-radius: 12px;
+  background-color: #f8faf6;
+  text-align: left;
+}
+
+.education-icon {
+  margin-top: 0.1em;
+}
+
+.education-icon img {
+  display: block;
+  width: clamp(1.75rem, 4vw, 2.5rem);
+  height: auto;
+}
+
+.education-info {
+  min-width: 0;
+}
+
+.education-item h4 {
+  margin: 0 0 6px;
+  font-size: clamp(1.05rem, calc(1rem + 0.4vw), 1.3rem);
+  font-weight: 600;
+}
+
+.education-item p {
+  margin: 0 0 4px;
+  color: #777;
+}
+
+.education-item span {
+  font-size: 0.9em;
+  color: #999;
 }
 
 .contact-container {

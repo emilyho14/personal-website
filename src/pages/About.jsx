@@ -1,5 +1,6 @@
 import { useState } from "react";
 import illini from "../../images/illini.png"
+import graduationCap from "../../images/graduation-cap.svg";
 import CS_GGIS from "./CS_GGIS";
 import Card from "../components/card";
 
@@ -68,14 +69,33 @@ export default function About() {
 
     return (
     <div>
-        <div className="about-info">
-            <div> 
-                Master's of Computer Science (MCS) - University of Illinois at Urbana Champaign [Expected December 2026]
+        <div className="education">
+            <div className="education-item">
+                <div className="education-icon">
+                    <img src={graduationCap} alt="" />
+                </div>
+
+                <div className="education-info">
+                    <h4>Master of Computer Science (MCS)</h4>
+                    <p>University of Illinois Urbana-Champaign</p>
+                    <span>August 2025 – December 2026</span>
+                </div>
             </div>
-            <div>
-                B.S. Computer Science + Geography & Geographic Information Science (CS + GGIS)  - University of Illinois at Urbana Champaign [May 2025]
+
+            <div className="education-item">
+                <div className="education-icon">
+                    <img src={graduationCap} alt="" />
+                </div>
+
+                <div className="education-info">
+                    <h4>
+                        B.S. in Computer Science + Geography &amp;
+                        Geographic Information Science
+                    </h4>
+                    <p>University of Illinois Urbana-Champaign</p>
+                    <span>August 2021 – May 2025</span>
+                </div>
             </div>
-            
         </div>
         <CS_GGIS />
         <div className="about-interests-div">
