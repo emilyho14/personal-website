@@ -69,6 +69,7 @@ export default function About() {
 
     return (
     <div>
+        <h1 className="page-title">About Me</h1>
         <div className="education">
             <div className="education-item">
                 <div className="education-icon">

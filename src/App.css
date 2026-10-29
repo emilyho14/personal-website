@@ -26,10 +26,6 @@
   .simple-home {
     grid-template-columns: 1fr;
   }
-  .header-nav {
-    gap: 0.8rem 1.1rem;
-    flex-wrap: wrap;
-  }
 }
 
 html { 
@@ -55,7 +51,8 @@ body {
 .header-title {
   margin: 10px;
   margin-top: 0px;
-  font-size: 2.5rem;
+  font-size: clamp(3rem, 5vw, 4.25rem);
+  line-height: 1.15;
 }
 
 .header-title a,
@@ -67,14 +64,31 @@ body {
 .header-nav {
   display: flex;
   justify-content: center;
-  gap: 3vw;
   margin-bottom: 10px;
-  font-size: 1.05rem;
+}
+
+.header-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.75rem);
+  font-size: clamp(1.5rem, 1.8vw, 3.5rem);
 }
 
 .header-nav a {
+  display: inline-block;
   transition: transform 0.2s ease-in-out;
-  margin-bottom: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  padding: 0.35rem;
+  background: transparent;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .header-title a:visited,
@@ -90,12 +104,60 @@ body {
   transform: scale(1.17);
 }
 
+@media (max-width: 700px) {
+  .header-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  .header-title {
+    margin: 0;
+    font-size: clamp(2.5rem, 8vw, 3.2rem);
+  }
+
+  .header-nav {
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-nav-links {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    background: #b5cc93;
+    font-size: clamp(1.15rem, 4.5vw, 1.4rem);
+  }
+
+  .header-nav-links.is-open {
+    display: flex;
+  }
+
+  .header-nav-links a {
+    padding: 0.45rem 0;
+  }
+}
+
 .content {
   padding: 20px;
 }
 
 .routes {
-  padding: 0 10px 10px;
+  padding: clamp(1rem, 3vw, 2rem) 10px 10px;
 }
 
 .simple-home {
@@ -390,7 +452,7 @@ body {
 .research-header {
   display: inline-block;
   max-width: 90ch;
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
   line-height: 1.15;
   text-wrap: balance;
 }
@@ -399,31 +461,39 @@ body {
   text-align: center;
 }
 
-.research-div a{
-  font-size: 1.3rem;
+.research-div a {
   text-decoration: none;
 }
 
-.research-title a{
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+.research-title a {
+  font-size: inherit;
 }
 
 .research-title {
-  margin: 0 auto clamp(0.35rem, 1.2vw, 0.75rem);
+  margin: 0 auto clamp(0.75rem, 2vw, 1.25rem);
   padding-inline: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.05vw, 1.rem);
+  line-height: 1.15;
 }
 
 .research-group-name a{
   display: inline-block;
   max-width: 70ch;
   padding-inline: clamp(0.5rem, 3vw, 1.5rem);
-  font-size: clamp(1.1rem, calc(0.95rem + 0.65vw), 1.4rem);
+  font-size: clamp(1.15rem, calc(1rem + 0.8vw), 1.6rem);
   line-height: 1.4;
   text-wrap: balance;
 }
 
 .research-group-name {
-  margin-bottom: clamp(0.25rem, 0.8vw, 0.6rem);
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.page-title {
+  margin: 0 0 clamp(1rem, 2.5vw, 1.75rem);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  text-align: center;
 }
 
 .research-goal {

@@ -17,6 +17,7 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 function Contact() {
     return (
         <div>
+            <h1 className="page-title">Contact</h1>
             <div className='contact-container'>
                 <p>I'd love to connect! Whether you want to talk about software development, research, or collaboration opportunities, feel free to reach out below.</p>
             </div>
